@@ -34,7 +34,7 @@ buttons = [
 for text, row, col in buttons:
     btn_image = white_img if text.isdigit() else black_img
     btn = Button(window, text=text, font=("Arial", 18), image=btn_image, compound="center",
-                 width=80, height=80, bg='black', fg='white', command=lambda t=text: on_button_click(t))
+                 width=40, height=40, bg='black', fg='white', command=lambda t=text: on_button_click(t))
     btn.image = btn_image  # Keep a reference to avoid garbage collection
     btn.grid(row=row, column=col, padx=5, pady=5)
 
